@@ -9,6 +9,10 @@ add_library(imgui
   "backends/imgui_impl_opengl3.cpp"
 )
 
+target_include_directories(imgui
+  PRIVATE ../glfw/include
+)
+
 add_library(imgui::imgui ALIAS imgui)
 
 target_include_directories(imgui
